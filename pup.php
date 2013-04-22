@@ -35,9 +35,9 @@ if ($txt) {
     <meta charset="utf-8"/>
 </head>
 <body>
-    <p><?php echo nl2br(htmlspecialchars($out, ENT_QUOTES));?></p>
+    <p><?php echo nl2br(htmlspecialchars($out, ENT_QUOTES | ENT_IGNORE));?></p>
     <form action="" method="post">
-        <textarea name="txt" id="txt" cols="80" rows="10"><?php echo htmlspecialchars($txt, ENT_QUOTES);?></textarea><br />
+        <textarea name="txt" id="txt" cols="80" rows="10"><?php echo htmlspecialchars($txt, ENT_QUOTES | ENT_IGNORE);?></textarea><br />
         <input type="submit" name="ok" value=" Apaidāpā! " />
     </form>
 </body>
