@@ -1,4 +1,4 @@
-<?
+<?php
 header('Content-Type: text/html; charset=utf-8');
 
 mb_internal_encoding("UTF-8");
@@ -27,7 +27,7 @@ if ($txt) {
 ?>
 
 
-<?='<?xml version="1.0" encoding="UTF-8"?>'?>
+
 <!doctype html>
 <html>
 <head>
@@ -35,9 +35,9 @@ if ($txt) {
     <meta charset="utf-8"/>
 </head>
 <body>
-    <p><?=nl2br(htmlspecialchars($out))?></p>
+    <p><?php echo nl2br(htmlspecialchars($out, ENT_QUOTES));?></p>
     <form action="" method="post">
-        <textarea name="txt" id="txt" cols="80" rows="10"><?=htmlspecialchars($txt)?></textarea><br />
+        <textarea name="txt" id="txt" cols="80" rows="10"><?php echo htmlspecialchars($txt, ENT_QUOTES);?></textarea><br />
         <input type="submit" name="ok" value=" Apaidāpā! " />
     </form>
 </body>
