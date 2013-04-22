@@ -10,7 +10,7 @@ $txt = isset($_POST['txt']) ? $_POST['txt'] : false;
 $out = '';
 
 if ($txt) {
-    for ($i = 0; $i < mb_strlen($txt)+1; $i++) {
+    for ($i = 0; $i < mb_strlen($txt); $i++) {
         $char = mb_substr($txt, $i, 1);
         if (mb_strpos($patsk, mb_convert_case($char, MB_CASE_LOWER)) !== false) {
             $zilbe .= $char;
